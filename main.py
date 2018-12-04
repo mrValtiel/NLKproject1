@@ -1,7 +1,7 @@
 import sys
 import os
-import re
 import speech_text as st
+import command_support as cs
 
 #t = st.getSpeechCommand()
 #print(t) #{'success': True, 'error': None, 'transcription': 'hello and welcome my friend'}
@@ -19,13 +19,14 @@ commandsHistory = [] #list of previous commands
 statusHistory = [] #list of status of previous commands
 history = 0
 
-while (choice != '3'):
+while (choice != '4'):
     cls()
     print("*************************************************************")
     print("Welcome to Human Console, please start by choosing an option:")
     print("1: write command")
     print("2: say command")
-    print("3: exit Human Console")
+    print("3: enter commands history")
+    print("4: exit Human Console")
     if (history > 0):
         print("*************************************************************")
         print("Command history:") #last 3 commands
@@ -73,9 +74,29 @@ while (choice != '3'):
         commandsHistory.append(command)
 
         #trying to understand the command
-
+        status = cs.recognizeCommand(command)
 
         s = "Status: " + status
         statusHistory.append(s)
+
+
+    if (choice == '3'):
+        historyInput = ""
+        while (historyInput != "exit"):
+            cls()
+            size = len(commandsHistory) - 1
+            for i in range(0, size):
+                print("Command number: ", i + 1)
+                print(commandsHistory[i])
+                print(statusHistory[i])
+            print("*************************************************************")
+            print("Total number of commands: ", size + 1)
+            print("Type \"exit\" to exit commands history")
+            historyInput = input()
+
+    '''
+    if (choice > '4' or choice < '1'):
+        print("Invalid choice number")
+    '''
 
 print("Goodbye")
