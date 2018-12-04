@@ -6,7 +6,7 @@ def getSpeechCommand():
 
     with mic as source:
         r.adjust_for_ambient_noise(source)
-        print("Say command")
+        print("Say your command")
         audio = r.listen(source)
 
     response = {
