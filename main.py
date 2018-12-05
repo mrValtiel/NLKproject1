@@ -90,9 +90,17 @@ while (choice != '4'):
                 print(commandsHistory[i])
                 print(statusHistory[i])
             print("*************************************************************")
-            print("Total number of commands: ", size + 1)
+            print("Total number of commands: ", size)
+            print("Type \"save\" to save commands history to file")
             print("Type \"exit\" to exit commands history")
             historyInput = input()
+            if (historyInput == "save"):
+                #save history to file
+                historyFile = open("history.txt", "w+")
+                for i in range(0, size):
+                    historyFile.write(commandsHistory[i] + "\n")
+                    historyFile.write(statusHistory[i] + "\n")
+                historyFile.close()
 
     '''
     if (choice > '4' or choice < '1'):
