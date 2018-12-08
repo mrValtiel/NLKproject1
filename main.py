@@ -65,7 +65,7 @@ while (choice != '4'):
             validCommand = True
         if (response["success"] == False):
             command = "NULL"
-            status = "Error: " + response["error"]
+            status = "ERROR: " + response["error"]
             validCommand = False
 
     #if speech was succesfully transcripted into text

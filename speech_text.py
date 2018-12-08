@@ -5,6 +5,7 @@ def getSpeechCommand():
     mic = sr.Microphone()
 
     with mic as source:
+        print("Please wait")
         r.adjust_for_ambient_noise(source)
         print("Say your command")
         audio = r.listen(source)
