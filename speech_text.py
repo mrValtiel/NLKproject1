@@ -25,5 +25,8 @@ def getSpeechCommand():
     except sr.UnknownValueError:
         # speech was unintelligible
         response["error"] = "Unable to recognize speech"
+    except:
+        response["success"] = False
+        response["error"] = "Unknown error"
 
     return response

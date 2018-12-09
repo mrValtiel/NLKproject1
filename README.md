@@ -12,3 +12,4 @@ Features:
  - running another programs (done)
  - closing another programs (done)
  - printing list of items in specified directory (done)
+ - running random program (done)

@@ -1,5 +1,5 @@
+#ships game for project NLKproject1
 import os
-import sys
 import random
 
 #function to clear screen

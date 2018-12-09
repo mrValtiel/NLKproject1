@@ -1,5 +1,4 @@
 import re
-import sys
 import os
 import datetime
 import webbrowser
@@ -26,9 +25,9 @@ def recognizeCommand(command):
         return status
 
     #HANDLE OPENING COMMAND WITHOUTH FILENAME
-    elif (re.search("[oO][pP][eE][nN] [tT]*[eE]*[xX]*[tT]*[ ]*[fF][iI][lL][eE]$", command) or re.search("[rR][eE][aA][dD] [tT]*[eE]*[xX]*[tT]*[ ]*[fF][iI][lL][eE]$", command)):
-        status = "ERROR: no filename given"
-        return status
+    #elif (re.search("[oO][pP][eE][nN] [tT]*[eE]*[xX]*[tT]*[ ]*[fF][iI][lL][eE]$", command) or re.search("[rR][eE][aA][dD] [tT]*[eE]*[xX]*[tT]*[ ]*[fF][iI][lL][eE]$", command)):
+        #status = "ERROR: no filename given"
+        #return status
 
     #READ TEXT FILE
     elif (re.search("[oO][pP][eE][nN] [tT][eE][xX][tT][ ]*[fF][iI][lL][eE]", command) or re.search("[rR][eE][aA][dD] [tT][eE][xX][tT][ ]*[fF][iI][lL][eE]", command)):
@@ -90,7 +89,7 @@ def recognizeCommand(command):
         status = "SUCCESS: opened web browser with page " + pageUrl
         return status
 
-    # SHIPS
+    #SHIPS
     elif re.search("run random program", command):
         print("Are you sure? It will close Human Console")
         print("Type \"yes\" or \"no\"")
@@ -108,10 +107,11 @@ def recognizeCommand(command):
             return status
 
     #RUN OTHER PROGRAM
-    elif re.search("[rR][uU][nN][ ]*[pP]*[rR]*[oO]*[gG]*[rR]*[aA]*[mM]*", command):
+    elif re.search("[rR][uU][nN]", command):
         if re.search("[rR][uU][nN][ ]*[pP]*[rR]*[oO]*[gG]*[rR]*[aA]*[mM]* ([a-zA-Z0-9\.\_\-\/]+)", command):
             match = re.search("[rR][uU][nN][ ]*[pP]*[rR]*[oO]*[gG]*[rR]*[aA]*[mM]* ([a-zA-Z0-9\.\_\-\/]+)", command)
             programName = match.group(1)
+            programName = programName.replace("\\", "/")
             try:
                 subprocess.call(programName)
                 #os.system(programName)

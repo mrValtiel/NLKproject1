@@ -1,3 +1,4 @@
+#TOTAL HOURS SPENT ON PROJECT: 16
 import sys
 import os
 import speech_text as st
@@ -50,6 +51,7 @@ while (choice != '4'):
     print("*************************************************************")
     print("Enter your actual choice here:")
     choice = input()
+    validCommand = False
 
     #text input
     if (choice == '1'):
