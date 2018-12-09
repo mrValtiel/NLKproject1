@@ -79,6 +79,9 @@ while (choice != '4'):
         s = "Status: " + status
         statusHistory.append(s)
 
+        if status == "SUCCESS: ships played":
+            choice = '4'
+
 
     if (choice == '3'):
         historyInput = ""

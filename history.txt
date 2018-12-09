@@ -1,10 +1,25 @@
-aaa
-Status: status
-bbb
-Status: status
-ccc
-Status: status
-date
-Status: SUCCESS: Today is: 5-12-2018
-time
-Status: SUCCESS: The time is: 20:47:8
+what day is it today?
+Status: SUCCESS: Today is: 9-12-2018
+tell me the time
+Status: SUCCESS: The time is: 14:12:50
+open file
+Status: ERROR: no filename given
+read file text file history
+Status: invalid command
+read text file history
+Status: SUCCESS: file printed
+open notepad file
+Status: SUCCESS: file D:/Data/Studies/V semestr/Przetwarzanie jêzyka naturalnego/Projects/somefile.txt opened with program D:/Programs/NotePad++/notepad++.exe
+create text file
+Status: SUCCESS: file "something.txt" created
+open web browser with page facebook.com
+Status: SUCCESS: opened web browser with page facebook.com
+run program D:/Programs/NotePad++/notepad++.exe
+Status: ERROR: could not run program
+kill excel
+Status: SUCCESS: Process excel.exe terminated
+show items in dir D:/Music
+Status: SUCCESS: list of files in directory "D:/Music":
+['1 hour of Ambient Fantasy Music v2.mp4', '1 hour of Ambient Fantasy Music.mp4', '1 hour of Deppressive Music.mp4', 'ABBA', 'AC DC', 'Accept', 'Apocalyptica', 'Babcia W³adzia', 'Bee Gees', 'Black Label Society', 'Black Sabbath', 'Carrion', 'CD from Nici', 'Celtic Music', 'Darth Vader', 'David Bowie', 'Depeche Mode', 'Drowning Pool', 'E Nomine', 'Eluveitie', 'Flynnville Train', 'Ghost', 'Iron Maiden', 'Korpiklaani', 'Maddogz', 'Metallica', 'Michael Jackson', 'Motörhead', 'Muzyka irlandzka', 'My', 'Nightwish', 'Oberschlesien', 'Orden Ogan', 'Ozzy Osbourne - Scream', 'Pacific Rim', 'Party Music', 'Pop Evil', 'Popping', 'Proletaryat', 'Rammstein', 'Republika', 'Ró¿ne', 'Sabaton', 'Slayer', 'Slipknot', 'Socially Acceptable Music', 'Soundtrack', 'Steeldrivers', 'Strachy Na Lachy', 'System Of A Down', 'Telefon', 'The Hobbit', 'The Nun OST', 'Type O Negative', 'Wardruna', 'WiedŸmin 3 Soundtrack', 'YouTube', 'ZZ Top']
+ASR
+Status: SUCCESS: ASR works correctly
